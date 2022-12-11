@@ -1,12 +1,22 @@
+import { InfoGentlemans } from '../../types/gentleman.info';
+import { Gentleman } from '../Gentleman/gentleman';
 import { Header } from '../header/header';
-// import footer
+import { Section } from '../section/section';
 
-export function Layout({ children }: { children: JSX.Element }) {
+export function Layout({
+    data,
+    children,
+}: {
+    data: InfoGentlemans;
+    children: JSX.Element;
+}) {
     return (
-        <div className="container">
+        <>
             <Header></Header>
-            <main>{children}</main>
-            <footer></footer>
-        </div>
+            <Section></Section>
+            <main>
+                <Gentleman data={data}></Gentleman>
+            </main>
+        </>
     );
 }
