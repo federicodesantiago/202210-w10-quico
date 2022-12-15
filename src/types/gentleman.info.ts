@@ -1,4 +1,4 @@
-export type InfoGentleman = {
+export type InfoGentlemanType = {
     id: number;
     name: string;
     status: string;
@@ -7,6 +7,7 @@ export type InfoGentleman = {
     picture: string;
     alternativeText: string;
     selected: boolean;
+    delete: false;
 };
 
-export type InfoGentlemans = Array<InfoGentleman>;
+export type InfoGentleman = Array<InfoGentlemanType>;
